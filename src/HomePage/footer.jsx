@@ -35,7 +35,7 @@ export default function Footer() {
       </div>
       <div className="icon-container">
         <VideoLibraryIcon
-          style={{ fontSize: 45, color: "#5C334F", marginTop: "25px" }}
+          style={{ fontSize: 45, color: "#5C334F", marginTop: "20px" }}
           className="icon"
         />
         <p className="icon-name">Mídia</p>

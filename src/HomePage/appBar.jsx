@@ -57,6 +57,7 @@ function ResponsiveAppBar() {
                 height: "60px",
                 padding: "4px",
                 transform: "scale(3.4)", // Aumenta visualmente a imagem sem alterar o layout
+                marginLeft: "60px" 
               }}
             />
             <Tooltip title="Open settings">
