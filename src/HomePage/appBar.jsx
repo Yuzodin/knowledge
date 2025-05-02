@@ -44,14 +44,14 @@ function ResponsiveAppBar() {
   return (
     <AppBar
       position="static"
-      sx={{ backgroundColor: darkMode ? "#333" : "#A78BFA" }}
+      sx={{ backgroundColor: darkMode ? "#333" : "#0D51D9" }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Lado esquerdo: AdbIcon, Knowledge e Avatar */}
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <img
-              src="../../Imagens/Knowledge Logo (2)-Photoroom.png"
+              src="../../Imagens/KnowLedge OG Logo.png"
               alt="Knowledge Logo"
               style={{
                 height: "60px",
@@ -72,7 +72,7 @@ function ResponsiveAppBar() {
             <Typography
               variant="subtitle1"
               sx={{
-                color: "#5C334F",
+                color: "#FFFFFF",
                 fontWeight: 500,
                 margin: "15px",
                 fontFamily: "Garamond, serif",
@@ -89,7 +89,7 @@ function ResponsiveAppBar() {
           {/* Lado direito: Botões, Search, Menu */}
           <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
             {/* SearchIcon primeiro */}
-            <IconButton size="large" color="#5C334F">
+            <IconButton size="large" color="#FFFFFF">
               <SearchIcon />
             </IconButton>
 
@@ -99,7 +99,7 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
-                  color: "#5C334F",
+                  color: "#FFFFFF",
                   fontFamily: "Garamond, serif",
                   fontWeight: "bold",
                   display: "block",
@@ -116,7 +116,7 @@ function ResponsiveAppBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="#5C334F"
+              color="#FFFFFF"
             >
               <MenuIcon />
             </IconButton>
@@ -125,7 +125,7 @@ function ResponsiveAppBar() {
               size="large"
               aria-label="toggle dark mode"
               onClick={toggleDarkMode}
-              color="#5C334F"
+              color="#FFFFFF"
             >
               {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
             </IconButton>

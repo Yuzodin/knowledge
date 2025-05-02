@@ -10,14 +10,14 @@ export default function Footer() {
     <footer className="footer">
       <div className="icon-container">
         <ForumIcon
-          style={{ fontSize: 45, color: "#5C334F", marginTop: "20px" }}
+          style={{ fontSize: 45, color: "#FFFFFF", marginTop: "20px" }}
           className="icon"
         />
         <p className="icon-name">Chat</p>
       </div>
       <div className="icon-container">
         <SportsEsportsIcon
-          style={{ fontSize: 45, color: "#5C334F", marginTop: "20px" }}
+          style={{ fontSize: 45, color: "#FFFFFF", marginTop: "20px" }}
           className="icon"
         />
         <p className="icon-name">Games</p>
@@ -28,14 +28,14 @@ export default function Footer() {
       </div>
       <div className="icon-container">
         <MusicNoteIcon
-          style={{ fontSize: 45, color: "#5C334F", marginTop: "20px" }}
+          style={{ fontSize: 45, color: "#FFFFFF", marginTop: "20px" }}
           className="icon"
         />
         <p className="icon-name">Música</p>
       </div>
       <div className="icon-container">
         <VideoLibraryIcon
-          style={{ fontSize: 45, color: "#5C334F", marginTop: "20px" }}
+          style={{ fontSize: 45, color: "#FFFFFF", marginTop: "20px" }}
           className="icon"
         />
         <p className="icon-name">Mídia</p>
