@@ -10,7 +10,7 @@
   
   .navigation-title {
     color: #0D51D9; 
-    font-family: "Garamond, serif";
+    font-family: "Open Sans", sans-serif;
     font-size: 1.325rem;
     font-weight: 500;
     margin-bottom: 0.5rem;
@@ -25,7 +25,7 @@
   }
   
   .tab-button {
-    font-family: "Garamond, serif";
+    font-family: "Open Sans", sans-serif;
     font-size: 1.325rem;
     color: #0D51D9;
     font-weight: 500;

@@ -88,9 +88,8 @@ function ResponsiveAppBar() {
 
           {/* Lado direito: Botões, Search, Menu */}
           <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
-            {/* SearchIcon primeiro */}
-            <IconButton size="large" color="#FFFFFF">
-              <SearchIcon />
+            <IconButton size="large">
+              <SearchIcon style={{color:"#FFFFFF"}}/>
             </IconButton>
 
             {pages.map((page) => (
@@ -100,10 +99,10 @@ function ResponsiveAppBar() {
                 sx={{
                   my: 2,
                   color: "#FFFFFF",
-                  fontFamily: "Garamond, serif",
+                  fontFamily: "'Open Sans', sans-serif",
                   fontWeight: "bold",
                   display: "block",
-                  fontSize: "15px",
+                  fontSize: "14px",
                 }}
               >
                 {page}
@@ -118,17 +117,17 @@ function ResponsiveAppBar() {
               onClick={handleOpenNavMenu}
               color="#FFFFFF"
             >
-              <MenuIcon />
+              <MenuIcon style={{color:"#FFFFFF"}}/>
             </IconButton>
 
             <IconButton
               size="large"
               aria-label="toggle dark mode"
               onClick={toggleDarkMode}
-              color="#FFFFFF"
+              style={{color:"#FFFFFF"}}
             >
               {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
-            </IconButton>
+            </IconButton >
           </Box>
         </Toolbar>
       </Container>

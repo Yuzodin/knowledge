@@ -32,6 +32,7 @@
   
   .description {
     color: #0D51D9; 
+    font-family: "Open Sans", sans-serif;
     margin-top: 1rem;
   }
   
@@ -63,9 +64,10 @@
   }
   
   .completed {
-    background: linear-gradient(to bottom right, #f4f4f4, #e0c3fc);
-    border: 2px solid #b3a0df;
+    background: linear-gradient(to bottom right, #e6edfb, #b3c5f3);
+    border: 2px solid #9bbce7;
   }
+  
   
   .in-progress {
     background: linear-gradient(to bottom right, #f4f4f4, #c6e1f5);
@@ -110,9 +112,8 @@
   }
   
   .card-icon {
-    width: 3px;
-    height: 3px;
-    background-color: #e1bee7;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -124,7 +125,8 @@
   .module-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #6b4c9d;
+    color: #0D51D9;
+    font-family: "Open Sans", sans-serif;
   }
   
   .module-title.locked {
@@ -145,7 +147,7 @@
   
   .progress-bar {
     width: 100%;
-    background-color: #e2e2e2;
+    background-color: #ffffffde;
     border-radius: 9999px;
     height: 0.25rem;
   }
@@ -176,6 +178,7 @@
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-family: "Open Sans", sans-serif;
   }
   
   .access-button.blocked {

@@ -6,15 +6,17 @@ export default function CursoModulosAvancados() {
   const [hoveredModule, setHoveredModule] = useState(null);
   
   const modulos = [
-    { id: 1, titulo: "Modulo 01", progresso: 100, totalAulas: 8, icon: "📝" },
-    { id: 2, titulo: "Modulo 02", progresso: 75, totalAulas: 10, icon: "🦊" },
-    { id: 3, titulo: "Modulo 03", progresso: 0, totalAulas: 12, icon: "📊" },
-    { id: 4, titulo: "Modulo 04", progresso: 0, totalAulas: 8, icon: "📚" },
-    { id: 5, titulo: "Modulo 05", progresso: 0, totalAulas: 9, icon: "💡" },
-    { id: 6, titulo: "Modulo 06", progresso: 0, totalAulas: 7, icon: "🧩" },
-    { id: 7, titulo: "Modulo 07", progresso: 0, totalAulas: 11, icon: "🔧" },
+    { id: 1, titulo: "Modulo 01", progresso: 100, totalAulas: 8, icon: "https://flagcdn.com/w40/gb.png" },
+    { id: 2, titulo: "Modulo 02", progresso: 75, totalAulas: 10, icon: "https://flagcdn.com/w40/gb.png" },
+    { id: 3, titulo: "Modulo 03", progresso: 0, totalAulas: 12, icon: "https://flagcdn.com/w40/gb.png" },
+    { id: 4, titulo: "Modulo 04", progresso: 0, totalAulas: 8, icon: "https://flagcdn.com/w40/gb.png" },
+    { id: 5, titulo: "Modulo 05", progresso: 0, totalAulas: 9, icon: "https://flagcdn.com/w40/gb.png" },
+    { id: 6, titulo: "Modulo 06", progresso: 0, totalAulas: 7, icon: "https://flagcdn.com/w40/gb.png" },
+    { id: 7, titulo: "Modulo 07", progresso: 0, totalAulas: 11, icon: "https://flagcdn.com/w40/gb.png" },
     { id: 8, titulo: "Modulo 08", progresso: 0, totalAulas: 6, icon: "🏆" }
   ];
+
+  
 
   const CardsHome = (progresso) => {
     if (progresso === 100) return "completed";
@@ -55,7 +57,14 @@ export default function CursoModulosAvancados() {
 
               <div className="card-content">
                 <div className="icon-title">
-                  <div className="card-icon">{modulo.icon}</div>
+                <div className="card-icon">
+                {modulo.icon.includes("http") ? (
+                  <img src={modulo.icon} alt="ícone" width="24" height="16" />
+                ) : (
+                  modulo.icon
+                )}
+              </div>
+
                   <h2 className={`module-title ${bloqueado ? 'locked' : ''}`}>{modulo.titulo}</h2>
                 </div>
 
