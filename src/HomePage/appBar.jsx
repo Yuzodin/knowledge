@@ -64,7 +64,7 @@ function ResponsiveAppBar() {
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar
                   alt="Remy Sharp"
-                  src="../../Imagens\user-icon-member-login-isolated-vector.jpg"
+                  src="../../Imagens/user-icon-member-login-isolated-vector.jpg"
                   style={{ marginLeft: "90px" }}
                 />
               </IconButton>

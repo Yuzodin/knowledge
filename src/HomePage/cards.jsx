@@ -1,22 +1,57 @@
-import { useState } from 'react';
-import './CursoModulosAvancados.css'; // Certifique-se de criar esse arquivo CSS
+import { useState, useEffect } from 'react';
+import './CursoModulosAvancados.css';
 import { CiLock } from "react-icons/ci";
+import { FaAngleDown } from "react-icons/fa6";
 
 export default function CursoModulosAvancados() {
   const [hoveredModule, setHoveredModule] = useState(null);
-  
-  const modulos = [
-    { id: 1, titulo: "Modulo 01", progresso: 100, totalAulas: 8, icon: "https://flagcdn.com/w40/gb.png" },
-    { id: 2, titulo: "Modulo 02", progresso: 75, totalAulas: 10, icon: "https://flagcdn.com/w40/gb.png" },
-    { id: 3, titulo: "Modulo 03", progresso: 0, totalAulas: 12, icon: "https://flagcdn.com/w40/gb.png" },
-    { id: 4, titulo: "Modulo 04", progresso: 0, totalAulas: 8, icon: "https://flagcdn.com/w40/gb.png" },
-    { id: 5, titulo: "Modulo 05", progresso: 0, totalAulas: 9, icon: "https://flagcdn.com/w40/gb.png" },
-    { id: 6, titulo: "Modulo 06", progresso: 0, totalAulas: 7, icon: "https://flagcdn.com/w40/gb.png" },
-    { id: 7, titulo: "Modulo 07", progresso: 0, totalAulas: 11, icon: "https://flagcdn.com/w40/gb.png" },
-    { id: 8, titulo: "Modulo 08", progresso: 0, totalAulas: 6, icon: "🏆" }
-  ];
+  const [nivel, setNivel] = useState('Básico');
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [modulos, setModulos] = useState([]);
 
-  
+  const modulosPorNivel = {
+    'Básico': [
+      { id: 1, titulo: "Modulo 01", progresso: 100, totalAulas: 8, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 2, titulo: "Modulo 02", progresso: 75, totalAulas: 10, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 3, titulo: "Modulo 03", progresso: 0, totalAulas: 12, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 4, titulo: "Modulo 04", progresso: 0, totalAulas: 8, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 5, titulo: "Modulo 05", progresso: 0, totalAulas: 9, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 6, titulo: "Modulo 06", progresso: 0, totalAulas: 7, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 7, titulo: "Modulo 07", progresso: 0, totalAulas: 11, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 8, titulo: "Modulo 08", progresso: 0, totalAulas: 6, icon: "🏆" }
+    ],
+    'Médio': [
+      { id: 1, titulo: "Modulo 01", progresso: 0, totalAulas: 10, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 2, titulo: "Modulo 02", progresso: 0, totalAulas: 12, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 3, titulo: "Modulo 03", progresso: 0, totalAulas: 8, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 4, titulo: "Modulo 04", progresso: 0, totalAulas: 10, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 5, titulo: "Modulo 05", progresso: 0, totalAulas: 7, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 6, titulo: "Modulo 06", progresso: 0, totalAulas: 9, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 7, titulo: "Modulo 07", progresso: 0, totalAulas: 10, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 8, titulo: "Modulo 08", progresso: 0, totalAulas: 6, icon: "🏆" }
+    ],
+    'Avançado': [
+      { id: 1, titulo: "Modulo 01", progresso: 0, totalAulas: 15, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 2, titulo: "Modulo 02", progresso: 0, totalAulas: 13, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 3, titulo: "Modulo 03", progresso: 0, totalAulas: 14, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 4, titulo: "Modulo 04", progresso: 0, totalAulas: 11, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 5, titulo: "Modulo 05", progresso: 0, totalAulas: 10, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 6, titulo: "Modulo 06", progresso: 0, totalAulas: 12, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 7, titulo: "Modulo 07", progresso: 0, totalAulas: 8, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 8, titulo: "Modulo 08", progresso: 0, totalAulas: 6, icon: "🏆" }
+    ]
+  };
+
+  useEffect(() => {
+    setModulos(modulosPorNivel[nivel]);
+  }, [nivel]);
+
+  const handleNivelChange = (novoNivel) => {
+    setNivel(novoNivel);
+    setShowDropdown(false);
+  };
+
+  const niveis = ['Básico', 'Médio', 'Avançado'];
 
   const CardsHome = (progresso) => {
     if (progresso === 100) return "completed";
@@ -31,11 +66,28 @@ export default function CursoModulosAvancados() {
 
   return (
     <div className="curso-modulos-container">
-      <div className="header">
-        <h1 className="titleNivel">Nível: <strong>Básico</strong></h1>
-        <div className="divider"></div>
-        <p className="description">Complete os módulos na ordem para desbloquear conteúdos avançados</p>
-      </div>
+      <div className="header" style={{ position: 'relative' }}>
+      <h1 className="titleNivel">
+        Nível: <strong>{nivel}</strong>
+        <FaAngleDown
+          style={{ fontSize: '20px', marginLeft: '8px', cursor: 'pointer' }}
+          onClick={() => setShowDropdown(!showDropdown)}
+        />
+      </h1>
+
+      {showDropdown && (
+        <ul className="dropdown">
+          {niveis.map(n => (
+            <li key={n} onClick={() => handleNivelChange(n)}>{n}</li>
+          ))}
+        </ul>
+      )}
+
+      <div className="divider"></div>
+      <p className="description" style={{ fontSize: "16px" }}>
+        Complete os módulos na ordem para desbloquear conteúdos avançados
+      </p>
+    </div>
 
       <div className="modulos-grid">
         {modulos.map((modulo, index) => {

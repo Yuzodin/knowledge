@@ -13,7 +13,7 @@ export default function Footer() {
           style={{ fontSize: 45, color: "#FFFFFF", marginTop: "20px" }}
           className="icon"
         />
-        <p className="icon-name">Chat</p>
+        <p className="icon-name">Conversação</p>
       </div>
       <div className="icon-container">
         <SportsEsportsIcon
