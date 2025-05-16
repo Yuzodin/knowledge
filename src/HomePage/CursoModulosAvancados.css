@@ -16,8 +16,8 @@
   
   .titleNivel{
     color: #0D51D9; 
-    font-family: "Garamond, serif";
-    font-size: 34px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 1rem;
   }
@@ -175,7 +175,6 @@
     width: 160px;
     padding: 1rem;
     border-radius: 5px;
-    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: "Open Sans", sans-serif;
@@ -185,7 +184,6 @@
     background-color: #d1d5db;
     color: #9ca3af;
     cursor: not-allowed;
-    font-family: "Open Sans", sans-serif;
   }
   
   .access-button:not(.blocked) {

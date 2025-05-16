@@ -68,7 +68,7 @@ export default function CursoModulosAvancados() {
     <div className="curso-modulos-container">
       <div className="header" style={{ position: 'relative' }}>
       <h1 className="titleNivel">
-        Nível: <strong>{nivel}</strong>
+        Nível: {nivel}
         <FaAngleDown
           style={{ fontSize: '20px', marginLeft: '8px', cursor: 'pointer' }}
           onClick={() => setShowDropdown(!showDropdown)}
