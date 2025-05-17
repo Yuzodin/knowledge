@@ -245,3 +245,11 @@ body.dark .modulo-card.hovered {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
+body.dark .titleNivel {
+  color: #ffffff;
+}
+
+body.dark .description {
+  color: #ffffff;
+}
+

@@ -68,7 +68,7 @@ function ResponsiveAppBar() {
             <Typography
               variant="subtitle1"
               sx={{
-                color: darkMode ? "#262524" : "#FFFFFF",
+                color: "#FFFFFF",
                 fontWeight: 500,
                 margin: "15px",
                 fontFamily: "Garamond, serif",
@@ -83,7 +83,7 @@ function ResponsiveAppBar() {
 
           <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
             <IconButton size="large">
-              <SearchIcon style={{color: darkMode ? "#262524" : "#FFFFFF",}}/>
+              <SearchIcon style={{color: "#FFFFFF",}}/>
             </IconButton>
 
             {pages.map((page) => (
@@ -92,7 +92,7 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
-                  color: darkMode ? "#262524" : "#FFFFFF",
+                  color: "#FFFFFF",
                   fontFamily: "'Open Sans', sans-serif",
                   fontWeight: "bold",
                   display: "block",
@@ -107,16 +107,16 @@ function ResponsiveAppBar() {
               size="large"
               aria-label="menu"
               onClick={handleOpenNavMenu}
-              style={{color: darkMode ? "#262524" : "#FFFFFF",}}
+              style={{color: "#FFFFFF",}}
             >
-              <MenuIcon style={{color: darkMode ? "#262524" : "#FFFFFF",}}/>
+              <MenuIcon style={{color: "#FFFFFF",}}/>
             </IconButton>
 
             <IconButton
               size="large"
               aria-label="toggle dark mode"
               onClick={toggleDarkMode}
-              style={{color: darkMode ? "#262524" : "#FFFFFF",}}
+              style={{color: "#FFFFFF",}}
             >
               {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
             </IconButton>
