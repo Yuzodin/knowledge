@@ -1,24 +1,22 @@
 import React, { useState } from 'react';
-import './Navigation.css'; // Certifique-se de criar esse arquivo CSS
+import { useTheme } from './darkTheme'; // IMPORTANTE
+import './Navigation.css';
 
 export default function Navigation() {
   const [activeTab, setActiveTab] = useState('Meu Aprendizado');
+  const { darkMode } = useTheme(); // CORRETO
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
-
-  const opçoes = ['Meu Aprendizado', 'Atividades Extras', 'Tirar Duvidas'];
+  const opcoes = ['Meu Aprendizado', 'Atividades Extras', 'Tirar Duvidas'];
 
   return (
-    <div className="navigation-container">
-      <h2 className="navigation-title">O deseja fazer?</h2>
+    <div className={`navigation-container ${darkMode ? 'dark' : 'light'}`}>
+      <h2 className="navigation-title">O que deseja fazer?</h2>
       <div className="tab-container">
-        {opçoes.map((tab) => (
+        {opcoes.map((tab) => (
           <button
             key={tab}
-            className={`tab-button ${activeTab === tab ? 'active' : ''}`}
-            onClick={() => handleTabClick(tab)}
+            className={`tab-button ${activeTab === tab ? 'active' : ''} ${darkMode ? 'dark' : 'light'}`}
+            onClick={() => setActiveTab(tab)}
           >
             {tab}
           </button>

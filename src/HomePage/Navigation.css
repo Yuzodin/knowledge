@@ -45,4 +45,22 @@
     font-weight: 500;
     transform: scale(1.05);
   }
-  
+
+/* Dark Mode */
+
+.navigation-container.dark {
+  color: white;
+}
+.tab-button.active.dark {
+  background-color: #0D51D9;
+  color: #262524;
+  font-weight: 500;
+  transform: scale(1.05);
+}
+
+.tab-button.dark {
+  background-color: #262524;
+  color: #0D51D9;
+  font-weight: 200;
+  border: none;
+} 

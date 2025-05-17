@@ -38,14 +38,14 @@
   
   .modulos-grid {
     display: grid;
-    grid-template-columns: repeat(4, 300px); /* Define 4 colunas de 300px cada */
+    grid-template-columns: repeat(4, 300px); 
     gap: 2rem;
     width: 100%;
-    grid-auto-rows: minmax(200px, auto); /* Define altura mínima para os cards */
+    grid-auto-rows: minmax(200px, auto); 
     margin-top: -20px;
-    justify-content: center; /* Centraliza os cards */
-    margin-left: auto; /* Garante que o conteúdo fique centralizado */
-    margin-right: auto; /* Garante que o conteúdo fique centralizado */
+    justify-content: center; 
+    margin-left: auto; 
+    margin-right: auto; 
   }
   
   .modulo-card {
@@ -54,7 +54,7 @@
     overflow: hidden;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 300px; /* Largura dos cards ajustada para 300px */
+    width: 300px; 
   }
   
   
@@ -67,7 +67,6 @@
     background: linear-gradient(to bottom right, #e6edfb, #b3c5f3);
     border: 2px solid #9bbce7;
   }
-  
   
   .in-progress {
     background: linear-gradient(to bottom right, #f4f4f4, #c6e1f5);
@@ -157,13 +156,13 @@
     border-radius: 9999px;
   }
   
-  .progress.completed {
+  /* .progress.completed {
     background-color: #38a169;
   }
   
   .progress.in-progress {
     background-color: #6b4c9d;
-  }
+  } */
   
   .button-container {
     margin-top: auto;
@@ -210,6 +209,7 @@
     left: 240px;
     background-color: #fff;
     border: 1px solid #ccc;
+    color: #0D51D9;
     width: 120px;
     z-index: 1000;
     list-style: none;
@@ -227,4 +227,21 @@
     background-color: #f0f0f0;
   }
   
-  
+  /* Dark Mode */
+
+.dropdown.dark {
+  color: #0D51D9;
+}
+/* Quando o dark mode estiver ativado */
+
+body.dark .modulo-card.locked {
+  background: linear-gradient(to bottom right, #2b2a29, #383736);
+  border: 1px solid #5a5a5a;
+  color: #888;
+}
+
+body.dark .modulo-card.hovered {
+  transform: translateY(-10px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+

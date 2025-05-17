@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react';
 import './CursoModulosAvancados.css';
 import { CiLock } from "react-icons/ci";
 import { FaAngleDown } from "react-icons/fa6";
+import { useTheme } from './darkTheme'
 
 export default function CursoModulosAvancados() {
   const [hoveredModule, setHoveredModule] = useState(null);
   const [nivel, setNivel] = useState('Básico');
   const [showDropdown, setShowDropdown] = useState(false);
   const [modulos, setModulos] = useState([]);
+  const { darkMode } = useTheme();
 
   const modulosPorNivel = {
     'Básico': [
@@ -65,7 +67,7 @@ export default function CursoModulosAvancados() {
   };
 
   return (
-    <div className="curso-modulos-container">
+    <div className={`curso-modulos-container ${darkMode ? 'dark' : 'light'}`}>
       <div className="header" style={{ position: 'relative' }}>
       <h1 className="titleNivel">
         Nível: {nivel}
@@ -76,7 +78,7 @@ export default function CursoModulosAvancados() {
       </h1>
 
       {showDropdown && (
-        <ul className="dropdown">
+        <ul className={`dropdown ${darkMode ? 'dark' : 'light'}`}>
           {niveis.map(n => (
             <li key={n} onClick={() => handleNivelChange(n)}>{n}</li>
           ))}
