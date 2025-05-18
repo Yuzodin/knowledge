@@ -14,7 +14,7 @@ export default function CursoModulosAvancados() {
   const modulosPorNivel = {
     'Básico': [
       { id: 1, titulo: "Modulo 01", progresso: 100, totalAulas: 8, icon: "https://flagcdn.com/w40/gb.png" },
-      { id: 2, titulo: "Modulo 02", progresso: 75, totalAulas: 10, icon: "https://flagcdn.com/w40/gb.png" },
+      { id: 2, titulo: "Modulo 02", progresso: 50, totalAulas: 10, icon: "https://flagcdn.com/w40/gb.png" },
       { id: 3, titulo: "Modulo 03", progresso: 0, totalAulas: 12, icon: "https://flagcdn.com/w40/gb.png" },
       { id: 4, titulo: "Modulo 04", progresso: 0, totalAulas: 8, icon: "https://flagcdn.com/w40/gb.png" },
       { id: 5, titulo: "Modulo 05", progresso: 0, totalAulas: 9, icon: "https://flagcdn.com/w40/gb.png" },

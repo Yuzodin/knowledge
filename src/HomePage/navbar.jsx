@@ -1,12 +1,30 @@
 import React, { useState } from 'react';
-import { useTheme } from './darkTheme'; // IMPORTANTE
+import { useTheme } from './darkTheme'; 
 import './Navigation.css';
+
+// Componentes a serem exibidos
+import CursoModulosAvancados from './cards';
+import AtividadesExtras from './atividadesExtras';
+// import TirarDuvidas from './TirarDuvidas';
 
 export default function Navigation() {
   const [activeTab, setActiveTab] = useState('Meu Aprendizado');
-  const { darkMode } = useTheme(); // CORRETO
+  const { darkMode } = useTheme(); 
 
   const opcoes = ['Meu Aprendizado', 'Atividades Extras', 'Tirar Duvidas'];
+
+  const renderTabContent = () => {
+    switch (activeTab) {
+      case 'Meu Aprendizado':
+        return <CursoModulosAvancados />;
+      case 'Atividades Extras':
+        return <AtividadesExtras />;
+      case 'Tirar Duvidas':
+        return <TirarDuvidas />;
+      default:
+        return null;
+    }
+  };
 
   return (
     <div className={`navigation-container ${darkMode ? 'dark' : 'light'}`}>
@@ -21,6 +39,10 @@ export default function Navigation() {
             {tab}
           </button>
         ))}
+      </div>
+
+      <div className="tab-content">
+        {renderTabContent()}
       </div>
     </div>
   );
