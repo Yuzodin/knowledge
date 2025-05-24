@@ -71,8 +71,8 @@ function ResponsiveAppBar() {
                 color: "#FFFFFF",
                 fontWeight: 500,
                 margin: "15px",
-                fontFamily: "Garamond, serif",
-                fontSize: "18px",
+                fontFamily: "Open Sans, sans-serif",
+                fontSize: "14px",
               }}
             >
               Hello, User!
@@ -94,7 +94,6 @@ function ResponsiveAppBar() {
                   my: 2,
                   color: "#FFFFFF",
                   fontFamily: "'Open Sans', sans-serif",
-                  fontWeight: "bold",
                   display: "block",
                   fontSize: "14px",
                 }}

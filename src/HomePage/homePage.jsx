@@ -8,6 +8,7 @@ import Navigation from './navbar';
 import './homePage.css';
 import LoadingOverlay from './loading';
 
+
 function HomePageContent() {
   const { loading } = useTheme();
 

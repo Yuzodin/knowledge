@@ -33,6 +33,7 @@
   .description {
     color: #0D51D9; 
     font-family: "Open Sans", sans-serif;
+    font-size: 16px;
     margin-top: 12px;
   }
   
@@ -133,7 +134,7 @@
   }
   
   .module-info {
-    font-size: 0.875rem;
+    font-size: 0.975rem;
     color: #636363;
     margin-bottom: 1rem;
   }
@@ -156,14 +157,6 @@
     border-radius: 9999px;
   }
   
-  /* .progress.completed {
-    background-color: #38a169;
-  }
-  
-  .progress.in-progress {
-    background-color: #6b4c9d;
-  } */
-  
   .button-container {
     margin-top: auto;
     margin-right: auto;
@@ -177,23 +170,20 @@
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: "Open Sans", sans-serif;
+    font-weight: bold;
   }
   
   .access-button.blocked {
     background-color: #d1d5db;
     color: #9ca3af;
     cursor: not-allowed;
+    font-weight: bold;
   }
   
   .access-button:not(.blocked) {
-    background-color: #BF343F;
-    border: 1px solid #BF304A;
+    background-color: #0D51D9;
+    border: 1px solid #0D51D9;
     color: white;
-  }
-  
-  .access-button:not(.blocked):hover {
-    background-color: #BF304A;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
   .access-text,
@@ -235,7 +225,7 @@
 /* Quando o dark mode estiver ativado */
 
 body.dark .modulo-card.locked {
-  background: linear-gradient(to bottom right, #2b2a29, #383736);
+  background: #3B3B3B;
   border: 1px solid #5a5a5a;
   color: #888;
 }

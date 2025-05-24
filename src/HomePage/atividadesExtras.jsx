@@ -8,27 +8,32 @@ export default function AtividadesExtras() {
   const atividades = [
     {
       id: 1,
-      titulo: "Quiz de Vocabulário",
-      descricao: "Teste seu vocabulário com quizzes interativos.",
+      titulo: "Mídia",
+      descricao: "Videos, musicas, filmes, jogos e séries",
       link: "#",
     },
     {
       id: 2,
-      titulo: "Desafio de Escrita",
-      descricao: "Escreva um pequeno texto usando expressões novas.",
+      titulo: "Games",
+      descricao: "Flash cards ou jogos iterativos",
       link: "#",
     },
     {
       id: 3,
-      titulo: "Vídeo com Perguntas",
-      descricao: "Assista a um vídeo e responda às perguntas ao final.",
+      titulo: "Conversação",
+      descricao: "Conversção bate papo e vocabulario",
       link: "#",
     },
+    {
+      id: 4,
+      titulo: "Escrita e Leitura",
+      descricao: "Diário, traduções, simulados e Livros"
+    }
   ];
 
   return (
     <div className={`atividades-extras-container ${darkMode ? 'dark' : 'light'}`}>
-      <h1 className="atividades-title">Atividades Extras</h1>
+      <h1 className="atividades-title">English With:</h1>
       <p className="atividades-subtitle">Pratique ainda mais com essas atividades complementares!</p>
 
       <div className="atividades-grid">

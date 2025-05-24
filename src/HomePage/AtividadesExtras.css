@@ -1,11 +1,12 @@
 .atividades-extras-container {
   padding: 20px;
   border-radius: 8px;
+  margin-top: 20px;
 }
 
 .atividades-extras-container.light {
-  background-color: #f9f9f9;
   color: #333;
+  min-width: 1200px;
 }
 
 .atividades-extras-container.dark {
