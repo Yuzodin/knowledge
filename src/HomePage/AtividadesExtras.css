@@ -1,58 +1,269 @@
+/* ========== CONTAINER PRINCIPAL ========== */
 .atividades-extras-container {
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
+  width: 100%;
+  padding: 80px 0 40px;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.atividades-extras-container.light {
-  color: #333;
-  min-width: 1200px;
+/* Dark */
+
+
+/* ========== CENTRALIZAÇÃO E LARGURA MÁXIMA ========== */
+.container {
+  width: 90vw;       /* 100% da viewport */
+  max-width: none;
+  margin: 0;
+  padding: 0 40px;     /* você pode ajustar ou remover */
+  box-sizing: border-box;
 }
 
-.atividades-extras-container.dark {
-  background-color: #1f1f1f;
-  color: #fff;
+
+/* ========== HEADER ========== */
+.header-section {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeInUp 1s ease-out;
 }
 
 .atividades-title {
-  font-size: 24px;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
   margin-bottom: 10px;
+  background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 4s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(102, 126, 234, 0.4);
+}
+
+.title-underline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  margin: 0 auto 20px;
+  border-radius: 2px;
+  animation: expandWidth 1.2s ease-out 0.5s both;
 }
 
 .atividades-subtitle {
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 300;
+  animation: fadeInUp 1s ease-out 0.3s both;
 }
 
+/* ========== GRID DE CARDS ========== */
 .atividades-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
 }
 
+/* ========== CARD ========== */
 .atividade-card {
-  flex: 1 1 250px;
-  background-color: #ffffff20;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  transition: box-shadow 0.3s;
+  position: relative;
+  padding: 40px 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+/* Light card */
+.light .atividade-card {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark card */
+.dark .atividade-card {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito ao passar mouse */
+.atividade-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: translateX(-100%) rotate(45deg);
+  transition: transform 0.6s ease;
+}
+
+.atividade-card:hover::before {
+  transform: translateX(100%) rotate(45deg);
 }
 
 .atividade-card:hover {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
 
+.atividade-card h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.atividade-card p {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* ========== BOTÃO ========== */
 .btn-acessar {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 8px 16px;
-  background-color: #007bff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
   color: white;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-acessar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-acessar:hover::before {
+  left: 100%;
 }
 
 .btn-acessar:hover {
-  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.btn-acessar::after {
+  content: "→";
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.btn-acessar:hover::after {
+  transform: translateX(5px);
+}
+
+/* ========== FOOTER CTA ========== */
+.footer-cta {
+  text-align: center;
+  margin-top: 60px;
+  animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.cta-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 40px;
+  border-radius: 50px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.light .cta-badge {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dark .cta-badge {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ========== ANIMAÇÕES ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 768px) {
+  .atividades-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .atividade-card {
+    padding: 30px 20px;
+  }
+
+  .btn-acessar {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .cta-badge {
+    padding: 16px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .atividades-title {
+    font-size: 2.5rem;
+  }
+
+  .atividades-subtitle {
+    font-size: 1rem;
+  }
 }

@@ -72,7 +72,7 @@ export default function CursoModulosAvancados() {
       <h1 className="titleNivel">
         Nível: {nivel}
         <FaAngleDown
-          style={{ fontSize: '20px', marginLeft: '8px', cursor: 'pointer' }}
+          style={{ fontSize: '30px', marginLeft: '8px', cursor: 'pointer', color: "#1A202C"}}
           onClick={() => setShowDropdown(!showDropdown)}
         />
       </h1>
