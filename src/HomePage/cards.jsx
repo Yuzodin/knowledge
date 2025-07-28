@@ -86,7 +86,7 @@ export default function CursoModulosAvancados() {
       )}
 
       <div className="divider"></div>
-      <p className="description" style={{ fontSize: "16px" }}>
+      <p className="description" >
         Complete os módulos na ordem para desbloquear conteúdos avançados
       </p>
     </div>
