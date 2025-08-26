@@ -5,7 +5,7 @@ import './Navigation.css';
 // Componentes a serem exibidos
 import CursoModulosAvancados from './cards';
 import AtividadesExtras from './atividadesExtras';
-// import TirarDuvidas from './TirarDuvidas';
+import TirarDuvidas from './Faq';
 
 export default function Navigation() {
   const [activeTab, setActiveTab] = useState('Meu Aprendizado');

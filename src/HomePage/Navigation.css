@@ -40,7 +40,7 @@
   }
   
   .tab-button.active {
-    background-color: #0D51D9;
+    background: linear-gradient(45deg, #667eea, #764ba2);
     color: white;
     font-weight: 500;
     transform: scale(1.05);
