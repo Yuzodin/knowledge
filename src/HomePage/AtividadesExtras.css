@@ -108,6 +108,68 @@
   animation: fadeInUp 1s ease-out 0.3s both;
 }
 
+/* Título no dark mode */
+.dark .atividades-title {
+  background: #f7fafc;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Descrição no dark mode */
+.dark .description {
+  color: #e2e8f0;
+}
+
+.dark .status-info{
+  color: #e2e8f0;
+  background-color: #31302F;
+}
+
+.dark .tabela-navigation{
+    color: #e2e8f0;
+    background-color: #31302F;
+}
+
+.dark .MessageSquare{
+  color: #e2e8f0;
+}
+
+.dark .search-section{
+  background-color: #31302F;
+}
+
+.dark .category-grid > button{
+  background-color: #e2e8f0;
+}
+
+.dark .list-header > h2{
+  color: #e2e8f0;
+}
+
+.dark .faq-list{
+    color: #e2e8f0;
+    background-color: #31302F;
+}
+
+.dark .faq-question{
+  background-color: #e2e8f0;
+}
+
+.dark .contact-section{
+    color: #e2e8f0;
+    background-color: #262524;
+    border: none;
+}
+
+.dark .contact-section > h3 {
+    color: #e2e8f0;
+}
+
+.dark .contact-card {
+    color: #e2e8f0;
+}
+
 /* ========== GRID DE CARDS ========== */
 .atividades-grid {
   display: grid;
@@ -140,6 +202,7 @@
   background: rgba(255, 255, 255, 0.05);
   /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); */
 }
+
 
 /* Efeito ao passar mouse */
 .atividade-card::before {
@@ -314,3 +377,4 @@
     font-size: 1rem;
   }
 }
+

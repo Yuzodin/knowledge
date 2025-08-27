@@ -3,7 +3,7 @@ import { useTheme } from './darkTheme';
 import './Navigation.css';
 
 // Componentes a serem exibidos
-import CursoModulosAvancados from './cards';
+import CursoModulosAvancados from './Cards';
 import AtividadesExtras from './atividadesExtras';
 import TirarDuvidas from './Faq';
 

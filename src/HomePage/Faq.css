@@ -87,7 +87,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition-normal);
-  color: var(--text-secondary);
+  color: white;
 }
 
 .tabela-button.active {

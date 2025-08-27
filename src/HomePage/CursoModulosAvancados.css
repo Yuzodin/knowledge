@@ -47,20 +47,6 @@
   --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Tema escuro */
-[data-theme="dark"] {
-  --text-primary: #f7fafc;
-  --text-secondary: #e2e8f0;
-  --text-muted: #a0aec0;
-  --bg-primary: #1a202c;
-  --bg-secondary: #2d3748;
-  --bg-glass: rgba(45, 55, 72, 0.8);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.2);
-  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.2);
-}
-
 /* Container principal */
 .curso-modulos-container {
   display: flex;
@@ -71,7 +57,6 @@
   overflow-x: hidden;
   margin-bottom: 40px;
 }
-
 
 .curso-modulos-container > * {
   position: relative;
@@ -88,7 +73,7 @@
 .titleNivel {
   font-size: 28px;
   font-weight: 500;
-  background: #1A202C;
+  background: #262524;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -538,7 +523,9 @@
   .modulo-card {
     border: 2px solid var(--text-primary);
   }
-}/* Container principal ocupa 100% da viewport */
+}
+
+/* Container principal ocupa 100% da viewport */
 .curso-modulos-container {
   width: 90vw;
   display: flex;
@@ -599,4 +586,89 @@
     grid-template-columns: 1fr;
     gap: var(--space-md);
   }
+}
+
+/* ================================== */
+/* APENAS DARK MODE - SÓ ADIÇÕES     */
+/* ================================== */
+
+/* Dark Mode - Variáveis */
+.curso-modulos-container.dark {
+  --text-primary: #f7fafc;
+  --text-secondary: #e2e8f0;
+  --text-muted: #a0aec0;
+  --bg-primary: #1a202c;
+  --bg-secondary: #2d3748;
+  --bg-glass: rgba(45, 55, 72, 0.8);
+}
+
+/* Dark Mode - Container */
+.curso-modulos-container.dark {
+  background: #262524;
+}
+
+/* Dark Mode - Title */
+.curso-modulos-container.dark .titleNivel {
+  background: #f7fafc;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Dark Mode - Description */
+.curso-modulos-container.dark .description {
+  color: #e2e8f0;
+}
+
+/* Dark Mode - Cards */
+.curso-modulos-container.dark .modulo-card {
+  background: rgba(45, 55, 72, 0.6);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode - Card States */
+.curso-modulos-container.dark .locked {
+  background: #31302F;
+  border-color: rgba(113, 128, 150, 0.3);
+}
+
+/* Dark Mode - Module Title */
+.curso-modulos-container.dark .module-title {
+  color: #f7fafc;
+}
+
+.curso-modulos-container.dark .module-title.locked {
+  color: #a0aec0;
+}
+
+/* Dark Mode - Module Details */
+.curso-modulos-container.dark .module-details {
+  color: #a0aec0;
+}
+
+/* Dark Mode - Progress Bar */
+.curso-modulos-container.dark .progress-bar {
+  background: rgba(74, 85, 104, 0.3);
+}
+
+/* Dark Mode - Blocked Button */
+.curso-modulos-container.dark .access-button.blocked {
+  background: linear-gradient(135deg, #4a5568, #2d3748);
+  color: #a0aec0;
+}
+
+/* Dark Mode - Dropdown */
+.curso-modulos-container.dark .dropdown {
+  background: rgba(45, 55, 72, 0.9);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.curso-modulos-container.dark .dropdown li {
+  color: #f7fafc;
+}
+
+.curso-modulos-container.dark .dropdown li:hover {
+  background: rgba(102, 126, 234, 0.2);
 }

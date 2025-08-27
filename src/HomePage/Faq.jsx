@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import './Faq.css';
 import './AtividadesExtras.css'; // Arquivo CSS separado
+import { useTheme } from './darkTheme'
 
 export default function TirarDuvidasQ() {
   const [activeTab, setActiveTab] = useState('faq');
@@ -19,6 +20,7 @@ export default function TirarDuvidasQ() {
   });
   const [questions, setQuestions] = useState([]);
   const [showSuccess, setShowSuccess] = useState(false);
+  const { darkMode } = useTheme();
 
   const categories = [
     { id: 'all', name: 'Todas', icon: <BookOpen size={20} /> },
@@ -71,7 +73,7 @@ export default function TirarDuvidasQ() {
   const filteredFAQ = faqData.filter(item => {
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
     const matchesSearch = item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.answer.toLowerCase().includes(searchTerm.toLowerCase());
+    item.answer.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -122,15 +124,15 @@ export default function TirarDuvidasQ() {
             className={`tabela-button ${activeTab === 'faq' ? 'active' : ''}`}
             onClick={() => setActiveTab('faq')}
           >
-            <HelpCircle size={20} />
-            Perguntas Frequentes
+            <HelpCircle size={20}  style={{color: darkMode ? "#f7fafc" : "#1A202C"}}/>
+            <span style={{color: darkMode ? "#f7fafc" : "#1A202C"}}>Perguntas Frequentes</span>
           </button>
           <button 
             className={`tabela-button ${activeTab === 'ask' ? 'active' : ''}`}
             onClick={() => setActiveTab('ask')}
           >
-            <MessageSquare size={20} />
-            Fazer Pergunta
+            <MessageSquare size={20} style={{color: darkMode ? "#f7fafc" : "#1A202C"}}/>
+            <span style={{color: darkMode ? "#f7fafc" : "#1A202C"}}>Fazer Pergunta</span>
           </button>
         </div>
 
