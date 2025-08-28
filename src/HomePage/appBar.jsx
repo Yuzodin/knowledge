@@ -45,7 +45,7 @@ function ResponsiveAppBar() {
                 }}
               />
               <Tooltip title="Abrir perfil">
-                <IconButton sx={{ p: 0, ml: 6 }}>
+                <IconButton sx={{ p: 0, ml: 6 }} style={{marginLeft: "80px"}}>
                   <Avatar
                     alt="Remy Sharp"
                     src="../../Imagens/user-icon-member-login-isolated-vector.jpg"
