@@ -4,6 +4,7 @@ import { ThemeProvider, useTheme } from './darkTheme';
 import ResponsiveAppBar from './appBar';
 import Footer from './footer';
 import Navigation from './navbar';
+import PaginaAula from './PaginaAula';
 // import CardsHome from './cards';
 import './homePage.css';
 import LoadingOverlay from './loading';
@@ -17,8 +18,7 @@ function HomePageContent() {
       {loading && <LoadingOverlay />}
       <ResponsiveAppBar />
       <Navigation />
-      //
-      {/* <CardsHome /> */}
+      <PaginaAula />
       <Footer />
     </>
   );

@@ -332,6 +332,10 @@
   overflow: hidden;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+    text-decoration: none; 
+  color: white;         
+  display: inline-block; 
+  text-align: center;
 }
 
 .access-button::before {
